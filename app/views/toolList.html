@@ -1,0 +1,10 @@
+<div class="tools">
+   <ul role="menu">
+      <li role="menuItem" ng-repeat="tool in toolListController.toolList">
+         <a ng-href="/tools/{{tool.url}}">
+            <span>IMAGE</span>
+            <span>{{tool.name}}</span>
+         </a>
+      </li>
+   </ul>
+</div>

@@ -1,0 +1,15 @@
+<div class="menuItems">
+   <h1>{{menuItemListController.list[0].category}}</h1>
+   <table role="menu">
+      <tr role="heading">
+         <th></th>
+         <th>Name</th>
+         <th>Price</th>
+      </tr>
+      <tr role="menuItem" ng-repeat="menuItem in menuItemListController.list">
+         <td><img role="menuItem" ng-src="{{menuItemListController.getImageUrl(menuItem._id)}}" /></td>
+         <td>{{menuItem.name}}</td>
+         <td>{{menuItemListController.priceForDisplay(menuItem.price)}}</td>
+      </tr>
+   </table>
+</div>
