@@ -1,10 +1,10 @@
-@import 'vars';
-@import 'typography';
-@import 'spinner';
-@import '../../node_modules/bootstrap/dist/css/bootstrap';
-@import '../../node_modules/angular-loading-bar/build/loading-bar';
-@import '../../node_modules/sweetalert/dist/sweetalert';
-@import 'console';
+@import "vars";
+@import "typography";
+@import "spinner";
+@import "../../node_modules/bootstrap/dist/css/bootstrap";
+@import "../../node_modules/angular-loading-bar/build/loading-bar";
+@import "../../node_modules/sweetalert/dist/sweetalert";
+@import "console";
 body {
   font-family: Helvetica, sans-serif;
   color: $font-color--dark;
@@ -49,6 +49,17 @@ body {
       padding: 10px 0 10px 0;
       //cursor: pointer;
     }
+  }
+}
+
+li {
+  display: block;
+  width: 200px;
+  margin-top: 20px;
+
+  a span:nth-child(2) {
+    display: table;
+    margin: 0 auto;
   }
 }
 

@@ -17,6 +17,13 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider) {
     title: 'HeadlightAiming'
   });
 
+  $stateProvider.state('Tyre Size', {
+    url: '/tools/Tyre Size Calculator',
+    controller: 'TyreSizeController as tyreSizeController',
+    templateUrl: 'tools/tyreSize.html',
+    title: 'TyreSize'
+  });
+
   $urlRouterProvider.otherwise('/');
 }
 
