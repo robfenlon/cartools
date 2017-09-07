@@ -72,3 +72,21 @@ li {
   font-weight: bold;
   border: 2px solid;
 }
+
+i.fa {
+  cursor: pointer;
+}
+
+table.tyres {
+  tr[role="header"] > th.spacer {
+    width: 50px;
+  }
+  tr {
+    &:nth-child(even) {
+      background: #ccc;
+    }
+    &:nth-child(odd) {
+      background: #fff;
+    }
+  }
+}

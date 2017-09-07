@@ -1,11 +1,56 @@
 <div>
    <h1>Tyre Size</h1>
-   <ul role="menu">
-      <li role="menuItem" ng-repeat="tyre in tyreSizeController.tyreList">
-         <a ng-href="/tools/{{tool.url}}">
-            <span><img src="{{tool.image}}"/></span>
-            <span>{{tool.name}}</span>
-         </a>
-      </li>
-   </ul>
+   <p>Output Units:
+      <label><input type="radio" name="units" value="metric" ng-model="color.name" /> Metric</label>
+      <label><input type="radio" name="units" value="imperial" ng-model="color.name" /> Imperial</label>
+   </p>
+   <table role="menu" class="tyres">
+      <tr role="header">
+         <th colspan="5"></th>
+         <th class="spacer"></th>
+         <th>
+            Sidewall
+         </th>
+         <th>
+            Radius
+         </th>
+         <th>
+            Diameter
+         </th>
+         <th>
+            Circumference
+         </th>
+         <th>
+            Revs/{{tyreSizeController.unitDistance()}}
+         </th>
+         <th>
+            Difference
+         </th>
+      </tr>
+      <tr role="menuItem" ng-repeat="tyre in tyreSizeController.tyreList">
+         <td style="padding-right: 20px;">
+            <i class="fa fa-minus-square-o fa-2x" ng-click="tyreSizeController.removeTyre($index)"></i>
+         </td>
+         <td>
+            <input type="text" maxlength="3" style="width: 35px;" ng-model="tyre.width" ng-change="tyreSizeController.inputChanged()"
+            />
+         </td>
+         <td>
+            <input type="text" maxlength="2" style="width: 25px;" ng-model="tyre.profile" ng-change="tyreSizeController.inputChanged()"
+            />
+         </td>
+         <td>
+            <span style="padding-left: 10px">R</span>
+         </td>
+         <td>
+            <input type="text" maxlength="2" style="width: 25px;" ng-model="tyre.radius" ng-change="tyreSizeController.inputChanged()"
+            />
+         </td>
+         <td></td>
+         <td>
+            {{tyreSizeController.getSidewall(tyre)}}
+         </td>
+      </tr>
+   </table>
+   <i class="fa fa-plus-square-o fa-2x" ng-click="tyreSizeController.newTyre()"></i>
 </div>
