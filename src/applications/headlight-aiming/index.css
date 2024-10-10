@@ -1,0 +1,9 @@
+.overlay {
+    position: absolute;
+    left: 340px;
+    top: 505px;
+    background-color: pink;
+    padding: 2px;
+    font-weight: bold;
+    border: 2px solid;
+  }

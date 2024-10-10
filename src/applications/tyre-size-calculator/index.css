@@ -1,0 +1,26 @@
+table.tyres {
+  width: 100%;
+
+  thead tr th.spacer {
+    width: 50px;
+  }
+
+  tbody td:nth-child(3) input,
+  tbody td:nth-child(5) input {
+    width: 35px;
+  }
+
+  tbody td:nth-child(2) input {
+    width: 50px;
+  }
+
+  tr {
+    &:nth-child(even) {
+      background: #ccc;
+    }
+
+    &:nth-child(odd) {
+      background: #fff;
+    }
+  }
+}
