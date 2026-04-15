@@ -73,7 +73,7 @@ function App() {
     </>;
 
   return (
-    <Box sx={{ display: 'block', height: 412, width: 870 }}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
         position="fixed"
