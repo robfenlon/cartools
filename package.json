@@ -4,7 +4,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://robfenlon.visualstudio.com/_git/CarTools"
+    "url": "https://github.com/robfenlon/cartools"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
